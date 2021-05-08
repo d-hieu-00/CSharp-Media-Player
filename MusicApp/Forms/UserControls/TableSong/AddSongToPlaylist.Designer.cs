@@ -31,8 +31,8 @@ namespace MusicApp.Forms.UserControls.TableSong
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddSongToPlaylist));
             this.Panel_Header = new System.Windows.Forms.Panel();
-            this.Lb_Header = new System.Windows.Forms.Label();
             this.Btn_Close = new System.Windows.Forms.Button();
+            this.Lb_Header = new System.Windows.Forms.Label();
             this.Panel_Main = new System.Windows.Forms.Panel();
             this.Cbox_Playlist = new System.Windows.Forms.ComboBox();
             this.Btn_OK = new System.Windows.Forms.Button();
@@ -44,8 +44,8 @@ namespace MusicApp.Forms.UserControls.TableSong
             // Panel_Header
             // 
             this.Panel_Header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(144)))), ((int)(((byte)(142)))));
-            this.Panel_Header.Controls.Add(this.Lb_Header);
             this.Panel_Header.Controls.Add(this.Btn_Close);
+            this.Panel_Header.Controls.Add(this.Lb_Header);
             this.Panel_Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Header.Location = new System.Drawing.Point(0, 0);
             this.Panel_Header.Name = "Panel_Header";
@@ -54,20 +54,6 @@ namespace MusicApp.Forms.UserControls.TableSong
             this.Panel_Header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
             this.Panel_Header.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
             this.Panel_Header.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form_MouseUp);
-            // 
-            // Lb_Header
-            // 
-            this.Lb_Header.AutoSize = true;
-            this.Lb_Header.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lb_Header.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Lb_Header.Location = new System.Drawing.Point(12, 13);
-            this.Lb_Header.Name = "Lb_Header";
-            this.Lb_Header.Size = new System.Drawing.Size(134, 17);
-            this.Lb_Header.TabIndex = 1;
-            this.Lb_Header.Text = "Add song to playlist -";
-            this.Lb_Header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
-            this.Lb_Header.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
-            this.Lb_Header.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form_MouseUp);
             // 
             // Btn_Close
             // 
@@ -84,6 +70,20 @@ namespace MusicApp.Forms.UserControls.TableSong
             this.Btn_Close.Click += new System.EventHandler(this.Lb_Close_Click);
             this.Btn_Close.MouseEnter += new System.EventHandler(this.Lb_Close_MouseEnter);
             this.Btn_Close.MouseLeave += new System.EventHandler(this.Lb_Close_MouseLeave);
+            // 
+            // Lb_Header
+            // 
+            this.Lb_Header.AutoSize = true;
+            this.Lb_Header.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_Header.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Lb_Header.Location = new System.Drawing.Point(12, 13);
+            this.Lb_Header.Name = "Lb_Header";
+            this.Lb_Header.Size = new System.Drawing.Size(134, 17);
+            this.Lb_Header.TabIndex = 1;
+            this.Lb_Header.Text = "Add song to playlist -";
+            this.Lb_Header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
+            this.Lb_Header.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
+            this.Lb_Header.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form_MouseUp);
             // 
             // Panel_Main
             // 
@@ -109,6 +109,7 @@ namespace MusicApp.Forms.UserControls.TableSong
             this.Cbox_Playlist.Name = "Cbox_Playlist";
             this.Cbox_Playlist.Size = new System.Drawing.Size(180, 25);
             this.Cbox_Playlist.TabIndex = 2;
+            this.Cbox_Playlist.DropDownClosed += new System.EventHandler(this.Cbox_DropDownClosed);
             // 
             // Btn_OK
             // 

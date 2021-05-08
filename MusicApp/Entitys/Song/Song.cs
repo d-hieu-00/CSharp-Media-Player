@@ -65,7 +65,7 @@ namespace MusicApp.Entitys
                 if (SongArtist == "")
                     SongArtist = "Unknown Artist";
                 if (AlbumTitle == "")
-                    SongArtist = "Unknown Album";
+                    AlbumTitle = "Unknown Album";
             }
             return true;
         }

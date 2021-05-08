@@ -66,7 +66,7 @@ namespace MusicApp.Classes
                     return i;
             return null;
         }
-        public Playlist GetPlaylistByTitile(string Name)
+        public Playlist GetPlaylistByTitle(string Name)
         {
             foreach (Playlist i in ListPlaylists)
                 if (i.Title.ToLower() == Name.ToLower())

@@ -29,6 +29,7 @@ namespace MusicApp.Forms.UserControls.TabPanel
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Panel_Right = new System.Windows.Forms.Panel();
             this.FlowPanel_TablePLaylist = new System.Windows.Forms.FlowLayoutPanel();
             this.FlowPanel_HeaderTBPlaylist = new System.Windows.Forms.FlowLayoutPanel();
@@ -55,6 +56,7 @@ namespace MusicApp.Forms.UserControls.TabPanel
             this.Lb_NameInfoPlaylist = new System.Windows.Forms.Label();
             this.Lb_TimeInfoPlaylist = new System.Windows.Forms.Label();
             this.FlowPanel_ListInfoPlaylist = new System.Windows.Forms.FlowLayoutPanel();
+            this.Timer_CheckPlayingPlaylist = new System.Windows.Forms.Timer(this.components);
             this.Panel_Right.SuspendLayout();
             this.FlowPanel_TablePLaylist.SuspendLayout();
             this.FlowPanel_HeaderTBPlaylist.SuspendLayout();
@@ -366,6 +368,12 @@ namespace MusicApp.Forms.UserControls.TabPanel
             this.FlowPanel_ListInfoPlaylist.Size = new System.Drawing.Size(382, 377);
             this.FlowPanel_ListInfoPlaylist.TabIndex = 3;
             // 
+            // Timer_CheckPlayingPlaylist
+            // 
+            this.Timer_CheckPlayingPlaylist.Enabled = true;
+            this.Timer_CheckPlayingPlaylist.Interval = 1000;
+            this.Timer_CheckPlayingPlaylist.Tick += new System.EventHandler(this.Timer_CheckPlayingPlaylist_Tick);
+            // 
             // Playlists
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,5 +431,6 @@ namespace MusicApp.Forms.UserControls.TabPanel
         private System.Windows.Forms.Panel PanelWarp_TboxNameSreach;
         private System.Windows.Forms.Panel PanelWarp_TboxNameCreate;
         private System.Windows.Forms.TextBox Tbox_NameCreate;
+        private System.Windows.Forms.Timer Timer_CheckPlayingPlaylist;
     }
 }

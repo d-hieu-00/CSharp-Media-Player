@@ -10,7 +10,7 @@ namespace MusicApp.Entitys
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public string AblumArtist { get; set; }
+        public string AlbumArtist { get; set; }
         private readonly List<int> idSongs = new List<int>();
         public List<int> IDSongs { get => idSongs; }
 

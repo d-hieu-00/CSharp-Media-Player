@@ -21,6 +21,8 @@ namespace MusicApp.Forms.UserControls.TableVideo
             MainForm.RoundedControl(this);
 
             Cursor = Cursors.WaitCursor;
+            Cbox_Playlist.Items.Clear();
+            Cbox_Playlist.Items.Add("Play now");
             foreach (var i in MyResources.Resources.ListPlaylists)
             {
                 if (i.ID == 0)
@@ -89,9 +91,29 @@ namespace MusicApp.Forms.UserControls.TableVideo
 
         private void Btn_OK_Click(object sender, EventArgs e)
         {
-            var pl = MyResources.Resources.GetPlaylistByTitile(Cbox_Playlist.SelectedItem.ToString());
-            pl.IDVideos.Add(Convert.ToInt32(Name));
+            if (Cbox_Playlist.SelectedIndex == 0)
+            {
+                Video s = MyResources.Resources.MsgVideos.FindVideoByID(Convert.ToInt32(Name));
+                Playlist p = new Playlist()
+                {
+                    ID = 0,
+                    Title = s.VideoTitle
+                };
+                p.IDVideos.Add(s.ID);
+                MyResources.Resources.DeletePlaylistByID(0);
+                MyResources.Resources.ListPlaylists.Add(p);
+                MyResources.Main.PlayingTab.LoadPlaylist(0);
+            }
+            else
+            {
+                var pl = MyResources.Resources.GetPlaylistByTitle(Cbox_Playlist.SelectedItem.ToString());
+                pl.IDVideos.Add(Convert.ToInt32(Name));
+            }
             Close();
+        }
+        private void Cbox_DropDownClosed(object sender, EventArgs e)
+        {
+            Lb_Header.Focus();
         }
     }
 }

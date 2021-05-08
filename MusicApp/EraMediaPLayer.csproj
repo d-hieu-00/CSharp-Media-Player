@@ -141,6 +141,18 @@
     <Compile Include="Forms\UserControls\TablePlaylist\RowPlaylist.Designer.cs">
       <DependentUpon>RowPlaylist.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UserControls\TableSongAlbum\RowInfoSongAlbum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\TableSongAlbum\RowInfoSongAlbum.Designer.cs">
+      <DependentUpon>RowInfoSongAlbum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\TableSongAlbum\RowSongAlbum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\TableSongAlbum\RowSongAlbum.Designer.cs">
+      <DependentUpon>RowSongAlbum.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UserControls\TableSong\AddSongToPlaylist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +268,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserControls\TablePlaylist\RowPlaylist.resx">
       <DependentUpon>RowPlaylist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\TableSongAlbum\RowInfoSongAlbum.resx">
+      <DependentUpon>RowInfoSongAlbum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\TableSongAlbum\RowSongAlbum.resx">
+      <DependentUpon>RowSongAlbum.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserControls\TableSong\AddSongToPlaylist.resx">
       <DependentUpon>AddSongToPlaylist.cs</DependentUpon>

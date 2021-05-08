@@ -11,6 +11,7 @@ namespace MusicApp.Forms.UserControls.TabPanel
     public partial class Playing : UserControl
     {
         public List<Dictionary<string, string>> NowPlaylist { get; set; }
+        public string TypePlaying { get; set; }
         //public int IndexMediaPlaying { get; }
         public Playing()
         {
@@ -57,9 +58,18 @@ namespace MusicApp.Forms.UserControls.TabPanel
         public void LoadPlaylist(int ID)
         {
             Playlist tmp = MyResources.Resources.GetPlaylistByID(ID);
+            if (tmp == null)
+            {
+                WMP_Media.URL = null;
+                FlowPanel_Playlist.Controls.Clear();
+                MyResources.Resources.IDNowPlaylist = 0;
+                NowPlaylist = null;
+                return;
+            }
             List<Dictionary<string, string>> list = tmp.GetPlayingListDic();
             NowPlaylist = list;
-
+            if (list.Count == 0)
+                WMP_Media.URL = null;
             MyResources.Resources.IDNowPlaylist = ID;
             FlowPanel_Playlist.Controls.Clear();
             for (int i=0; i< list.Count; i++)
@@ -72,6 +82,35 @@ namespace MusicApp.Forms.UserControls.TabPanel
                     r.SetNotPlaying();
                 FlowPanel_Playlist.Controls.Add(r);
             }
+            TypePlaying = "playlist";
+        }
+        public void LoadSongAlbum(int ID)
+        {
+            List<Dictionary<string, string>> list = MyResources.Resources.MsgSongs.FindSongsByAlbumID(ID);
+            if (list == null)
+            {
+                WMP_Media.URL = null;
+                FlowPanel_Playlist.Controls.Clear();
+                MyResources.Resources.IDNowPlaylist = 0;
+                NowPlaylist = null;
+                return;
+            }
+            MyResources.Resources.IDNowPlaylist = ID;
+            FlowPanel_Playlist.Controls.Clear();
+            // if album null
+            if (list.Count == 0)
+                WMP_Media.URL = null;
+            for (int i = 0; i < list.Count; i++)
+            {
+                RowTableNowPLaylist r = new RowTableNowPLaylist();
+                r.SetData(list[i]);
+                if (i == 0)
+                    r.SetPLaying();
+                else
+                    r.SetNotPlaying();
+                FlowPanel_Playlist.Controls.Add(r);
+            }
+            TypePlaying = "album";
         }
         public void DeleteItemInNowPlaylist()
         {
@@ -137,8 +176,16 @@ namespace MusicApp.Forms.UserControls.TabPanel
         }
         public void ReloadPlaylistByID()
         {
-            Playlist tmp = MyResources.Resources.GetPlaylistByID(MyResources.Resources.IDNowPlaylist);
-            List<Dictionary<string, string>> list = tmp.GetPlayingListDic();
+            List<Dictionary<string, string>> list;
+            if (TypePlaying == "playlist")
+            {
+                Playlist tmp = MyResources.Resources.GetPlaylistByID(MyResources.Resources.IDNowPlaylist);
+                list = tmp.GetPlayingListDic();
+            }
+            else
+            {
+                list = MyResources.Resources.MsgSongs.FindSongsByAlbumID(MyResources.Resources.IDNowPlaylist);
+            }
             bool IsControlNowPlayingDeleted = false;
             RowTableNowPLaylist NowPlaying = FlowPanel_Playlist.Controls[0] as RowTableNowPLaylist;
 
@@ -174,6 +221,24 @@ namespace MusicApp.Forms.UserControls.TabPanel
             ReloadPlaylistByID();
             WMP_Media.Focus();
             MyResources.Main.SetCursorDefault();
+        }
+
+        private void Timer_SetStatus_Tick(object sender, EventArgs e)
+        {
+            if (NowPlaylist != null)
+            {
+                string status = "No playing";
+                foreach (RowTableNowPLaylist i in FlowPanel_Playlist.Controls)
+                    if (i.Name == "Playing")
+                    {
+                        Dictionary<string, string> t = i.Tag as Dictionary<string, string>;
+                        status = t["type"] + ": " + t["name"];
+                        var f = status.Substring(0, 1).ToUpper();
+                        status = f + status.Substring(1, status.Length - 1);
+                        break;
+                    }
+                MyResources.Main.SetStatus(status);
+            }
         }
     }
 }

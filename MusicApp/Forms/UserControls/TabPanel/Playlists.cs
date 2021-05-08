@@ -145,7 +145,6 @@ namespace MusicApp.Forms.UserControls.TabPanel
                     return;
                 }
         }
-
         public void LoadPlaylistInfoByID(int ID)
         {
             Playlist tmp = MyResources.Resources.GetPlaylistByID(ID);
@@ -158,6 +157,23 @@ namespace MusicApp.Forms.UserControls.TabPanel
                 r.SetData(i);
                 FlowPanel_ListInfoPlaylist.Controls.Add(r);
             }
+        }
+
+        private void Timer_CheckPlayingPlaylist_Tick(object sender, EventArgs e)
+        {
+            string typePlaying = MyResources.Main.PlayingTab.TypePlaying;
+            if (typePlaying != null && typePlaying == "playlist")
+            {
+                RemovePlayplistPlaying();
+                foreach (RowPlaylist i in FlowPanel_ListPlaylist.Controls)
+                    if (i.GetID() == MyResources.Resources.IDNowPlaylist)
+                    {
+                        i.SetPlayingPlaylist();
+                        return;
+                    }
+            }
+            else
+                RemovePlayplistPlaying();
         }
     }
 }

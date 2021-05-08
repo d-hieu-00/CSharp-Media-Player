@@ -29,6 +29,7 @@ namespace MusicApp.Forms.UserControls.TabPanel
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Playing));
             this.FlowPanel_Header = new System.Windows.Forms.FlowLayoutPanel();
             this.Lb_Title = new System.Windows.Forms.Label();
@@ -39,6 +40,7 @@ namespace MusicApp.Forms.UserControls.TabPanel
             this.Lb_Name = new System.Windows.Forms.Label();
             this.FlowPanel_Playlist = new System.Windows.Forms.FlowLayoutPanel();
             this.WMP_Media = new AxWMPLib.AxWindowsMediaPlayer();
+            this.Timer_SetStatus = new System.Windows.Forms.Timer(this.components);
             this.FlowPanel_Header.SuspendLayout();
             this.FlowPanel_Col.SuspendLayout();
             this.TablePanel_Col.SuspendLayout();
@@ -155,6 +157,12 @@ namespace MusicApp.Forms.UserControls.TabPanel
             this.WMP_Media.Size = new System.Drawing.Size(433, 455);
             this.WMP_Media.TabIndex = 2;
             // 
+            // Timer_SetStatus
+            // 
+            this.Timer_SetStatus.Enabled = true;
+            this.Timer_SetStatus.Interval = 500;
+            this.Timer_SetStatus.Tick += new System.EventHandler(this.Timer_SetStatus_Tick);
+            // 
             // Playing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,5 +189,6 @@ namespace MusicApp.Forms.UserControls.TabPanel
         private System.Windows.Forms.Button Btn_Reload;
         private System.Windows.Forms.Label Lb_Duration;
         private System.Windows.Forms.Label Lb_Name;
+        private System.Windows.Forms.Timer Timer_SetStatus;
     }
 }

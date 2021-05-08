@@ -29,12 +29,13 @@ namespace MusicApp.Forms.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-            this.FlowPanel_ListInfoPlaylist = new System.Windows.Forms.FlowLayoutPanel();
-            this.Lb_NameInfoPlaylist = new System.Windows.Forms.Label();
-            this.Lb_HeaderPlaylistInfo = new System.Windows.Forms.Label();
-            this.TablePanel_HeaderColInfoPlaylist = new System.Windows.Forms.TableLayoutPanel();
-            this.Lb_TimeInfoPlaylist = new System.Windows.Forms.Label();
-            this.FlowPanel_HeaderInfoPlaylist = new System.Windows.Forms.FlowLayoutPanel();
+            this.components = new System.ComponentModel.Container();
+            this.FlowPanel_ListInfoAlbum = new System.Windows.Forms.FlowLayoutPanel();
+            this.Lb_NameInfoAlbum = new System.Windows.Forms.Label();
+            this.Lb_HeaderAlbumInfo = new System.Windows.Forms.Label();
+            this.TablePanel_HeaderColInfoAlbum = new System.Windows.Forms.TableLayoutPanel();
+            this.Lb_TimeInfoAlbum = new System.Windows.Forms.Label();
+            this.FlowPanel_HeaderInfoAlbum = new System.Windows.Forms.FlowLayoutPanel();
             this.FlowPanel_Left = new System.Windows.Forms.FlowLayoutPanel();
             this.PanelWarp_TboxNameSreach = new System.Windows.Forms.Panel();
             this.Tbox_NameSearch = new System.Windows.Forms.TextBox();
@@ -43,104 +44,108 @@ namespace MusicApp.Forms.UserControls
             this.Grbox_Search = new System.Windows.Forms.GroupBox();
             this.Panel_HeaderGroupFunction = new System.Windows.Forms.Panel();
             this.Grbox_GroupBy = new System.Windows.Forms.GroupBox();
-            this.Lb_ColNameListPlaylist = new System.Windows.Forms.Label();
-            this.Btn_Reload = new System.Windows.Forms.Button();
-            this.Lb_HeaderListPlaylist = new System.Windows.Forms.Label();
-            this.TablePanel_HeaderColListPlaylist = new System.Windows.Forms.TableLayoutPanel();
-            this.FlowPanel_HeaderTBPlaylist = new System.Windows.Forms.FlowLayoutPanel();
-            this.FlowPanel_TablePLaylist = new System.Windows.Forms.FlowLayoutPanel();
-            this.FlowPanel_ListPlaylist = new System.Windows.Forms.FlowLayoutPanel();
-            this.Panel_Right = new System.Windows.Forms.Panel();
+            this.Lb_OrderBy = new System.Windows.Forms.Label();
+            this.Cbox_Order = new System.Windows.Forms.ComboBox();
             this.Lb_Artist = new System.Windows.Forms.Label();
             this.Cbox_Artist = new System.Windows.Forms.ComboBox();
-            this.TablePanel_HeaderColInfoPlaylist.SuspendLayout();
-            this.FlowPanel_HeaderInfoPlaylist.SuspendLayout();
+            this.Lb_ColNameListAlbum = new System.Windows.Forms.Label();
+            this.Lb_HeaderListAlbum = new System.Windows.Forms.Label();
+            this.TablePanel_HeaderColListAlbum = new System.Windows.Forms.TableLayoutPanel();
+            this.Lb_ColArtist = new System.Windows.Forms.Label();
+            this.Btn_Reload = new System.Windows.Forms.Button();
+            this.FlowPanel_HeaderTBAlbum = new System.Windows.Forms.FlowLayoutPanel();
+            this.FlowPanel_TableAlbum = new System.Windows.Forms.FlowLayoutPanel();
+            this.FlowPanel_ListAlbum = new System.Windows.Forms.FlowLayoutPanel();
+            this.Panel_Right = new System.Windows.Forms.Panel();
+            this.Timer_CheckPlayingAlbum = new System.Windows.Forms.Timer(this.components);
+            this.TablePanel_HeaderColInfoAlbum.SuspendLayout();
+            this.FlowPanel_HeaderInfoAlbum.SuspendLayout();
             this.FlowPanel_Left.SuspendLayout();
             this.PanelWarp_TboxNameSreach.SuspendLayout();
             this.Grbox_Search.SuspendLayout();
             this.Panel_HeaderGroupFunction.SuspendLayout();
             this.Grbox_GroupBy.SuspendLayout();
-            this.TablePanel_HeaderColListPlaylist.SuspendLayout();
-            this.FlowPanel_HeaderTBPlaylist.SuspendLayout();
-            this.FlowPanel_TablePLaylist.SuspendLayout();
+            this.TablePanel_HeaderColListAlbum.SuspendLayout();
+            this.FlowPanel_HeaderTBAlbum.SuspendLayout();
+            this.FlowPanel_TableAlbum.SuspendLayout();
             this.Panel_Right.SuspendLayout();
             this.SuspendLayout();
             // 
-            // FlowPanel_ListInfoPlaylist
+            // FlowPanel_ListInfoAlbum
             // 
-            this.FlowPanel_ListInfoPlaylist.AutoScroll = true;
-            this.FlowPanel_ListInfoPlaylist.Location = new System.Drawing.Point(3, 77);
-            this.FlowPanel_ListInfoPlaylist.Name = "FlowPanel_ListInfoPlaylist";
-            this.FlowPanel_ListInfoPlaylist.Size = new System.Drawing.Size(382, 377);
-            this.FlowPanel_ListInfoPlaylist.TabIndex = 3;
+            this.FlowPanel_ListInfoAlbum.AutoScroll = true;
+            this.FlowPanel_ListInfoAlbum.Location = new System.Drawing.Point(3, 77);
+            this.FlowPanel_ListInfoAlbum.Name = "FlowPanel_ListInfoAlbum";
+            this.FlowPanel_ListInfoAlbum.Size = new System.Drawing.Size(382, 377);
+            this.FlowPanel_ListInfoAlbum.TabIndex = 3;
             // 
-            // Lb_NameInfoPlaylist
+            // Lb_NameInfoAlbum
             // 
-            this.Lb_NameInfoPlaylist.BackColor = System.Drawing.Color.White;
-            this.Lb_NameInfoPlaylist.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Lb_NameInfoPlaylist.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lb_NameInfoPlaylist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(170)))), ((int)(((byte)(109)))));
-            this.Lb_NameInfoPlaylist.Location = new System.Drawing.Point(3, 0);
-            this.Lb_NameInfoPlaylist.Name = "Lb_NameInfoPlaylist";
-            this.Lb_NameInfoPlaylist.Size = new System.Drawing.Size(205, 36);
-            this.Lb_NameInfoPlaylist.TabIndex = 1;
-            this.Lb_NameInfoPlaylist.Text = "Name";
-            this.Lb_NameInfoPlaylist.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Lb_NameInfoAlbum.BackColor = System.Drawing.Color.White;
+            this.Lb_NameInfoAlbum.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Lb_NameInfoAlbum.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_NameInfoAlbum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(170)))), ((int)(((byte)(109)))));
+            this.Lb_NameInfoAlbum.Location = new System.Drawing.Point(3, 0);
+            this.Lb_NameInfoAlbum.Name = "Lb_NameInfoAlbum";
+            this.Lb_NameInfoAlbum.Size = new System.Drawing.Size(205, 36);
+            this.Lb_NameInfoAlbum.TabIndex = 1;
+            this.Lb_NameInfoAlbum.Text = "Name";
+            this.Lb_NameInfoAlbum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Lb_HeaderPlaylistInfo
+            // Lb_HeaderAlbumInfo
             // 
-            this.Lb_HeaderPlaylistInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(170)))), ((int)(((byte)(109)))));
-            this.Lb_HeaderPlaylistInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lb_HeaderPlaylistInfo.ForeColor = System.Drawing.Color.White;
-            this.Lb_HeaderPlaylistInfo.Location = new System.Drawing.Point(3, 0);
-            this.Lb_HeaderPlaylistInfo.Name = "Lb_HeaderPlaylistInfo";
-            this.Lb_HeaderPlaylistInfo.Size = new System.Drawing.Size(379, 26);
-            this.Lb_HeaderPlaylistInfo.TabIndex = 0;
-            this.Lb_HeaderPlaylistInfo.Text = "Album info";
-            this.Lb_HeaderPlaylistInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Lb_HeaderAlbumInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(170)))), ((int)(((byte)(109)))));
+            this.Lb_HeaderAlbumInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_HeaderAlbumInfo.ForeColor = System.Drawing.Color.White;
+            this.Lb_HeaderAlbumInfo.Location = new System.Drawing.Point(3, 0);
+            this.Lb_HeaderAlbumInfo.Name = "Lb_HeaderAlbumInfo";
+            this.Lb_HeaderAlbumInfo.Size = new System.Drawing.Size(379, 26);
+            this.Lb_HeaderAlbumInfo.TabIndex = 0;
+            this.Lb_HeaderAlbumInfo.Text = "Album info";
+            this.Lb_HeaderAlbumInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // TablePanel_HeaderColInfoPlaylist
+            // TablePanel_HeaderColInfoAlbum
             // 
-            this.TablePanel_HeaderColInfoPlaylist.ColumnCount = 3;
-            this.TablePanel_HeaderColInfoPlaylist.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.TablePanel_HeaderColInfoPlaylist.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.TablePanel_HeaderColInfoPlaylist.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.TablePanel_HeaderColInfoPlaylist.Controls.Add(this.Lb_NameInfoPlaylist, 0, 0);
-            this.TablePanel_HeaderColInfoPlaylist.Controls.Add(this.Lb_TimeInfoPlaylist, 1, 0);
-            this.TablePanel_HeaderColInfoPlaylist.Location = new System.Drawing.Point(3, 29);
-            this.TablePanel_HeaderColInfoPlaylist.Name = "TablePanel_HeaderColInfoPlaylist";
-            this.TablePanel_HeaderColInfoPlaylist.RowCount = 1;
-            this.TablePanel_HeaderColInfoPlaylist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TablePanel_HeaderColInfoPlaylist.Size = new System.Drawing.Size(352, 36);
-            this.TablePanel_HeaderColInfoPlaylist.TabIndex = 1;
+            this.TablePanel_HeaderColInfoAlbum.ColumnCount = 3;
+            this.TablePanel_HeaderColInfoAlbum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.TablePanel_HeaderColInfoAlbum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.TablePanel_HeaderColInfoAlbum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.TablePanel_HeaderColInfoAlbum.Controls.Add(this.Lb_NameInfoAlbum, 0, 0);
+            this.TablePanel_HeaderColInfoAlbum.Controls.Add(this.Lb_TimeInfoAlbum, 1, 0);
+            this.TablePanel_HeaderColInfoAlbum.Location = new System.Drawing.Point(3, 29);
+            this.TablePanel_HeaderColInfoAlbum.Name = "TablePanel_HeaderColInfoAlbum";
+            this.TablePanel_HeaderColInfoAlbum.RowCount = 1;
+            this.TablePanel_HeaderColInfoAlbum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TablePanel_HeaderColInfoAlbum.Size = new System.Drawing.Size(352, 36);
+            this.TablePanel_HeaderColInfoAlbum.TabIndex = 1;
             // 
-            // Lb_TimeInfoPlaylist
+            // Lb_TimeInfoAlbum
             // 
-            this.Lb_TimeInfoPlaylist.BackColor = System.Drawing.Color.White;
-            this.Lb_TimeInfoPlaylist.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Lb_TimeInfoPlaylist.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lb_TimeInfoPlaylist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(170)))), ((int)(((byte)(109)))));
-            this.Lb_TimeInfoPlaylist.Location = new System.Drawing.Point(214, 0);
-            this.Lb_TimeInfoPlaylist.Name = "Lb_TimeInfoPlaylist";
-            this.Lb_TimeInfoPlaylist.Size = new System.Drawing.Size(99, 36);
-            this.Lb_TimeInfoPlaylist.TabIndex = 2;
-            this.Lb_TimeInfoPlaylist.Text = "Time";
-            this.Lb_TimeInfoPlaylist.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Lb_TimeInfoAlbum.BackColor = System.Drawing.Color.White;
+            this.Lb_TimeInfoAlbum.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Lb_TimeInfoAlbum.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_TimeInfoAlbum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(170)))), ((int)(((byte)(109)))));
+            this.Lb_TimeInfoAlbum.Location = new System.Drawing.Point(214, 0);
+            this.Lb_TimeInfoAlbum.Name = "Lb_TimeInfoAlbum";
+            this.Lb_TimeInfoAlbum.Size = new System.Drawing.Size(99, 36);
+            this.Lb_TimeInfoAlbum.TabIndex = 2;
+            this.Lb_TimeInfoAlbum.Text = "Time";
+            this.Lb_TimeInfoAlbum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FlowPanel_HeaderInfoPlaylist
+            // FlowPanel_HeaderInfoAlbum
             // 
-            this.FlowPanel_HeaderInfoPlaylist.Controls.Add(this.Lb_HeaderPlaylistInfo);
-            this.FlowPanel_HeaderInfoPlaylist.Controls.Add(this.TablePanel_HeaderColInfoPlaylist);
-            this.FlowPanel_HeaderInfoPlaylist.Location = new System.Drawing.Point(3, 3);
-            this.FlowPanel_HeaderInfoPlaylist.Name = "FlowPanel_HeaderInfoPlaylist";
-            this.FlowPanel_HeaderInfoPlaylist.Size = new System.Drawing.Size(382, 68);
-            this.FlowPanel_HeaderInfoPlaylist.TabIndex = 2;
+            this.FlowPanel_HeaderInfoAlbum.Controls.Add(this.Lb_HeaderAlbumInfo);
+            this.FlowPanel_HeaderInfoAlbum.Controls.Add(this.TablePanel_HeaderColInfoAlbum);
+            this.FlowPanel_HeaderInfoAlbum.Location = new System.Drawing.Point(3, 3);
+            this.FlowPanel_HeaderInfoAlbum.Name = "FlowPanel_HeaderInfoAlbum";
+            this.FlowPanel_HeaderInfoAlbum.Size = new System.Drawing.Size(382, 68);
+            this.FlowPanel_HeaderInfoAlbum.TabIndex = 2;
             // 
             // FlowPanel_Left
             // 
             this.FlowPanel_Left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(248)))), ((int)(((byte)(232)))));
-            this.FlowPanel_Left.Controls.Add(this.FlowPanel_HeaderInfoPlaylist);
-            this.FlowPanel_Left.Controls.Add(this.FlowPanel_ListInfoPlaylist);
+            this.FlowPanel_Left.Controls.Add(this.FlowPanel_HeaderInfoAlbum);
+            this.FlowPanel_Left.Controls.Add(this.FlowPanel_ListInfoAlbum);
             this.FlowPanel_Left.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FlowPanel_Left.Location = new System.Drawing.Point(0, 0);
             this.FlowPanel_Left.Name = "FlowPanel_Left";
@@ -179,6 +184,7 @@ namespace MusicApp.Forms.UserControls
             this.Btn_Search.TabIndex = 2;
             this.Btn_Search.Text = "Search";
             this.Btn_Search.UseVisualStyleBackColor = false;
+            this.Btn_Search.Click += new System.EventHandler(this.Btn_Search_Click);
             // 
             // Lb_NameSearch
             // 
@@ -215,6 +221,8 @@ namespace MusicApp.Forms.UserControls
             // 
             // Grbox_GroupBy
             // 
+            this.Grbox_GroupBy.Controls.Add(this.Lb_OrderBy);
+            this.Grbox_GroupBy.Controls.Add(this.Cbox_Order);
             this.Grbox_GroupBy.Controls.Add(this.Lb_Artist);
             this.Grbox_GroupBy.Controls.Add(this.Cbox_Artist);
             this.Grbox_GroupBy.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -225,102 +233,39 @@ namespace MusicApp.Forms.UserControls
             this.Grbox_GroupBy.TabStop = false;
             this.Grbox_GroupBy.Text = "Group by";
             // 
-            // Lb_ColNameListPlaylist
+            // Lb_OrderBy
             // 
-            this.Lb_ColNameListPlaylist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(248)))), ((int)(((byte)(232)))));
-            this.Lb_ColNameListPlaylist.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Lb_ColNameListPlaylist.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lb_ColNameListPlaylist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(170)))), ((int)(((byte)(109)))));
-            this.Lb_ColNameListPlaylist.Location = new System.Drawing.Point(3, 0);
-            this.Lb_ColNameListPlaylist.Name = "Lb_ColNameListPlaylist";
-            this.Lb_ColNameListPlaylist.Size = new System.Drawing.Size(296, 36);
-            this.Lb_ColNameListPlaylist.TabIndex = 5;
-            this.Lb_ColNameListPlaylist.Text = "Name";
-            this.Lb_ColNameListPlaylist.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Lb_OrderBy.AutoSize = true;
+            this.Lb_OrderBy.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_OrderBy.Location = new System.Drawing.Point(6, 55);
+            this.Lb_OrderBy.Name = "Lb_OrderBy";
+            this.Lb_OrderBy.Size = new System.Drawing.Size(61, 17);
+            this.Lb_OrderBy.TabIndex = 9;
+            this.Lb_OrderBy.Text = "Order by";
             // 
-            // Btn_Reload
+            // Cbox_Order
             // 
-            this.Btn_Reload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(170)))), ((int)(((byte)(109)))));
-            this.Btn_Reload.BackgroundImage = global::MusicApp.Properties.Resources.reload;
-            this.Btn_Reload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Btn_Reload.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Btn_Reload.FlatAppearance.BorderSize = 0;
-            this.Btn_Reload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Reload.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Reload.ForeColor = System.Drawing.Color.White;
-            this.Btn_Reload.Location = new System.Drawing.Point(305, 3);
-            this.Btn_Reload.Name = "Btn_Reload";
-            this.Btn_Reload.Size = new System.Drawing.Size(106, 30);
-            this.Btn_Reload.TabIndex = 5;
-            this.Btn_Reload.UseVisualStyleBackColor = false;
-            // 
-            // Lb_HeaderListPlaylist
-            // 
-            this.Lb_HeaderListPlaylist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(170)))), ((int)(((byte)(109)))));
-            this.Lb_HeaderListPlaylist.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lb_HeaderListPlaylist.ForeColor = System.Drawing.Color.White;
-            this.Lb_HeaderListPlaylist.Location = new System.Drawing.Point(3, 0);
-            this.Lb_HeaderListPlaylist.Name = "Lb_HeaderListPlaylist";
-            this.Lb_HeaderListPlaylist.Size = new System.Drawing.Size(433, 26);
-            this.Lb_HeaderListPlaylist.TabIndex = 4;
-            this.Lb_HeaderListPlaylist.Text = "Albums list ";
-            this.Lb_HeaderListPlaylist.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // TablePanel_HeaderColListPlaylist
-            // 
-            this.TablePanel_HeaderColListPlaylist.ColumnCount = 2;
-            this.TablePanel_HeaderColListPlaylist.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73F));
-            this.TablePanel_HeaderColListPlaylist.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27F));
-            this.TablePanel_HeaderColListPlaylist.Controls.Add(this.Lb_ColNameListPlaylist, 0, 0);
-            this.TablePanel_HeaderColListPlaylist.Controls.Add(this.Btn_Reload, 1, 0);
-            this.TablePanel_HeaderColListPlaylist.Location = new System.Drawing.Point(3, 29);
-            this.TablePanel_HeaderColListPlaylist.Name = "TablePanel_HeaderColListPlaylist";
-            this.TablePanel_HeaderColListPlaylist.RowCount = 1;
-            this.TablePanel_HeaderColListPlaylist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TablePanel_HeaderColListPlaylist.Size = new System.Drawing.Size(414, 36);
-            this.TablePanel_HeaderColListPlaylist.TabIndex = 6;
-            // 
-            // FlowPanel_HeaderTBPlaylist
-            // 
-            this.FlowPanel_HeaderTBPlaylist.Controls.Add(this.Lb_HeaderListPlaylist);
-            this.FlowPanel_HeaderTBPlaylist.Controls.Add(this.TablePanel_HeaderColListPlaylist);
-            this.FlowPanel_HeaderTBPlaylist.Location = new System.Drawing.Point(3, 3);
-            this.FlowPanel_HeaderTBPlaylist.Name = "FlowPanel_HeaderTBPlaylist";
-            this.FlowPanel_HeaderTBPlaylist.Size = new System.Drawing.Size(442, 68);
-            this.FlowPanel_HeaderTBPlaylist.TabIndex = 4;
-            // 
-            // FlowPanel_TablePLaylist
-            // 
-            this.FlowPanel_TablePLaylist.Controls.Add(this.FlowPanel_HeaderTBPlaylist);
-            this.FlowPanel_TablePLaylist.Controls.Add(this.FlowPanel_ListPlaylist);
-            this.FlowPanel_TablePLaylist.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FlowPanel_TablePLaylist.Location = new System.Drawing.Point(0, 89);
-            this.FlowPanel_TablePLaylist.Name = "FlowPanel_TablePLaylist";
-            this.FlowPanel_TablePLaylist.Size = new System.Drawing.Size(448, 366);
-            this.FlowPanel_TablePLaylist.TabIndex = 2;
-            // 
-            // FlowPanel_ListPlaylist
-            // 
-            this.FlowPanel_ListPlaylist.Location = new System.Drawing.Point(3, 77);
-            this.FlowPanel_ListPlaylist.Name = "FlowPanel_ListPlaylist";
-            this.FlowPanel_ListPlaylist.Size = new System.Drawing.Size(442, 286);
-            this.FlowPanel_ListPlaylist.TabIndex = 3;
-            // 
-            // Panel_Right
-            // 
-            this.Panel_Right.Controls.Add(this.FlowPanel_TablePLaylist);
-            this.Panel_Right.Controls.Add(this.Panel_HeaderGroupFunction);
-            this.Panel_Right.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Panel_Right.Location = new System.Drawing.Point(388, 0);
-            this.Panel_Right.Name = "Panel_Right";
-            this.Panel_Right.Size = new System.Drawing.Size(448, 455);
-            this.Panel_Right.TabIndex = 2;
+            this.Cbox_Order.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(170)))), ((int)(((byte)(109)))));
+            this.Cbox_Order.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cbox_Order.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cbox_Order.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cbox_Order.ForeColor = System.Drawing.Color.White;
+            this.Cbox_Order.FormattingEnabled = true;
+            this.Cbox_Order.Items.AddRange(new object[] {
+            "Name",
+            "Artist"});
+            this.Cbox_Order.Location = new System.Drawing.Point(81, 51);
+            this.Cbox_Order.Name = "Cbox_Order";
+            this.Cbox_Order.Size = new System.Drawing.Size(121, 25);
+            this.Cbox_Order.TabIndex = 8;
+            this.Cbox_Order.SelectedIndexChanged += new System.EventHandler(this.Cbox_Order_SelectedIndexChanged);
+            this.Cbox_Order.DropDownClosed += new System.EventHandler(this.Cbox_DropDownClosed);
             // 
             // Lb_Artist
             // 
             this.Lb_Artist.AutoSize = true;
             this.Lb_Artist.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lb_Artist.Location = new System.Drawing.Point(6, 24);
+            this.Lb_Artist.Location = new System.Drawing.Point(6, 23);
             this.Lb_Artist.Name = "Lb_Artist";
             this.Lb_Artist.Size = new System.Drawing.Size(38, 17);
             this.Lb_Artist.TabIndex = 6;
@@ -341,10 +286,125 @@ namespace MusicApp.Forms.UserControls
             "4",
             "5",
             "6"});
-            this.Cbox_Artist.Location = new System.Drawing.Point(81, 21);
+            this.Cbox_Artist.Location = new System.Drawing.Point(81, 20);
             this.Cbox_Artist.Name = "Cbox_Artist";
             this.Cbox_Artist.Size = new System.Drawing.Size(121, 25);
             this.Cbox_Artist.TabIndex = 5;
+            this.Cbox_Artist.SelectedIndexChanged += new System.EventHandler(this.Cbox_Artist_SelectedIndexChanged);
+            this.Cbox_Artist.DropDownClosed += new System.EventHandler(this.Cbox_DropDownClosed);
+            // 
+            // Lb_ColNameListAlbum
+            // 
+            this.Lb_ColNameListAlbum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(248)))), ((int)(((byte)(232)))));
+            this.Lb_ColNameListAlbum.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Lb_ColNameListAlbum.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_ColNameListAlbum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(170)))), ((int)(((byte)(109)))));
+            this.Lb_ColNameListAlbum.Location = new System.Drawing.Point(3, 0);
+            this.Lb_ColNameListAlbum.Name = "Lb_ColNameListAlbum";
+            this.Lb_ColNameListAlbum.Size = new System.Drawing.Size(221, 36);
+            this.Lb_ColNameListAlbum.TabIndex = 5;
+            this.Lb_ColNameListAlbum.Text = "Name";
+            this.Lb_ColNameListAlbum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Lb_HeaderListAlbum
+            // 
+            this.Lb_HeaderListAlbum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(170)))), ((int)(((byte)(109)))));
+            this.Lb_HeaderListAlbum.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_HeaderListAlbum.ForeColor = System.Drawing.Color.White;
+            this.Lb_HeaderListAlbum.Location = new System.Drawing.Point(3, 0);
+            this.Lb_HeaderListAlbum.Name = "Lb_HeaderListAlbum";
+            this.Lb_HeaderListAlbum.Size = new System.Drawing.Size(433, 26);
+            this.Lb_HeaderListAlbum.TabIndex = 4;
+            this.Lb_HeaderListAlbum.Text = "Albums list ";
+            this.Lb_HeaderListAlbum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TablePanel_HeaderColListAlbum
+            // 
+            this.TablePanel_HeaderColListAlbum.ColumnCount = 3;
+            this.TablePanel_HeaderColListAlbum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55F));
+            this.TablePanel_HeaderColListAlbum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36F));
+            this.TablePanel_HeaderColListAlbum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9F));
+            this.TablePanel_HeaderColListAlbum.Controls.Add(this.Lb_ColArtist, 0, 0);
+            this.TablePanel_HeaderColListAlbum.Controls.Add(this.Lb_ColNameListAlbum, 0, 0);
+            this.TablePanel_HeaderColListAlbum.Controls.Add(this.Btn_Reload, 2, 0);
+            this.TablePanel_HeaderColListAlbum.Location = new System.Drawing.Point(3, 29);
+            this.TablePanel_HeaderColListAlbum.Name = "TablePanel_HeaderColListAlbum";
+            this.TablePanel_HeaderColListAlbum.RowCount = 1;
+            this.TablePanel_HeaderColListAlbum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TablePanel_HeaderColListAlbum.Size = new System.Drawing.Size(414, 36);
+            this.TablePanel_HeaderColListAlbum.TabIndex = 6;
+            // 
+            // Lb_ColArtist
+            // 
+            this.Lb_ColArtist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(248)))), ((int)(((byte)(232)))));
+            this.Lb_ColArtist.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Lb_ColArtist.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_ColArtist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(170)))), ((int)(((byte)(109)))));
+            this.Lb_ColArtist.Location = new System.Drawing.Point(230, 0);
+            this.Lb_ColArtist.Name = "Lb_ColArtist";
+            this.Lb_ColArtist.Size = new System.Drawing.Size(143, 36);
+            this.Lb_ColArtist.TabIndex = 6;
+            this.Lb_ColArtist.Text = "Artist";
+            this.Lb_ColArtist.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Btn_Reload
+            // 
+            this.Btn_Reload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(170)))), ((int)(((byte)(109)))));
+            this.Btn_Reload.BackgroundImage = global::MusicApp.Properties.Resources.reload;
+            this.Btn_Reload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Btn_Reload.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Btn_Reload.FlatAppearance.BorderSize = 0;
+            this.Btn_Reload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Reload.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Reload.ForeColor = System.Drawing.Color.White;
+            this.Btn_Reload.Location = new System.Drawing.Point(379, 3);
+            this.Btn_Reload.Name = "Btn_Reload";
+            this.Btn_Reload.Size = new System.Drawing.Size(32, 30);
+            this.Btn_Reload.TabIndex = 5;
+            this.Btn_Reload.UseVisualStyleBackColor = false;
+            this.Btn_Reload.Click += new System.EventHandler(this.Btn_Reload_Click);
+            // 
+            // FlowPanel_HeaderTBAlbum
+            // 
+            this.FlowPanel_HeaderTBAlbum.Controls.Add(this.Lb_HeaderListAlbum);
+            this.FlowPanel_HeaderTBAlbum.Controls.Add(this.TablePanel_HeaderColListAlbum);
+            this.FlowPanel_HeaderTBAlbum.Location = new System.Drawing.Point(3, 3);
+            this.FlowPanel_HeaderTBAlbum.Name = "FlowPanel_HeaderTBAlbum";
+            this.FlowPanel_HeaderTBAlbum.Size = new System.Drawing.Size(442, 68);
+            this.FlowPanel_HeaderTBAlbum.TabIndex = 4;
+            // 
+            // FlowPanel_TableAlbum
+            // 
+            this.FlowPanel_TableAlbum.Controls.Add(this.FlowPanel_HeaderTBAlbum);
+            this.FlowPanel_TableAlbum.Controls.Add(this.FlowPanel_ListAlbum);
+            this.FlowPanel_TableAlbum.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FlowPanel_TableAlbum.Location = new System.Drawing.Point(0, 89);
+            this.FlowPanel_TableAlbum.Name = "FlowPanel_TableAlbum";
+            this.FlowPanel_TableAlbum.Size = new System.Drawing.Size(448, 366);
+            this.FlowPanel_TableAlbum.TabIndex = 2;
+            // 
+            // FlowPanel_ListAlbum
+            // 
+            this.FlowPanel_ListAlbum.Location = new System.Drawing.Point(3, 77);
+            this.FlowPanel_ListAlbum.Name = "FlowPanel_ListAlbum";
+            this.FlowPanel_ListAlbum.Size = new System.Drawing.Size(442, 286);
+            this.FlowPanel_ListAlbum.TabIndex = 3;
+            // 
+            // Panel_Right
+            // 
+            this.Panel_Right.Controls.Add(this.FlowPanel_TableAlbum);
+            this.Panel_Right.Controls.Add(this.Panel_HeaderGroupFunction);
+            this.Panel_Right.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Panel_Right.Location = new System.Drawing.Point(388, 0);
+            this.Panel_Right.Name = "Panel_Right";
+            this.Panel_Right.Size = new System.Drawing.Size(448, 455);
+            this.Panel_Right.TabIndex = 2;
+            // 
+            // Timer_CheckPlayingAlbum
+            // 
+            this.Timer_CheckPlayingAlbum.Enabled = true;
+            this.Timer_CheckPlayingAlbum.Interval = 1000;
+            this.Timer_CheckPlayingAlbum.Tick += new System.EventHandler(this.Timer_CheckPlayingAlbum_Tick);
             // 
             // SongAlbum
             // 
@@ -355,8 +415,8 @@ namespace MusicApp.Forms.UserControls
             this.Controls.Add(this.Panel_Right);
             this.Name = "SongAlbum";
             this.Size = new System.Drawing.Size(836, 455);
-            this.TablePanel_HeaderColInfoPlaylist.ResumeLayout(false);
-            this.FlowPanel_HeaderInfoPlaylist.ResumeLayout(false);
+            this.TablePanel_HeaderColInfoAlbum.ResumeLayout(false);
+            this.FlowPanel_HeaderInfoAlbum.ResumeLayout(false);
             this.FlowPanel_Left.ResumeLayout(false);
             this.PanelWarp_TboxNameSreach.ResumeLayout(false);
             this.PanelWarp_TboxNameSreach.PerformLayout();
@@ -365,9 +425,9 @@ namespace MusicApp.Forms.UserControls
             this.Panel_HeaderGroupFunction.ResumeLayout(false);
             this.Grbox_GroupBy.ResumeLayout(false);
             this.Grbox_GroupBy.PerformLayout();
-            this.TablePanel_HeaderColListPlaylist.ResumeLayout(false);
-            this.FlowPanel_HeaderTBPlaylist.ResumeLayout(false);
-            this.FlowPanel_TablePLaylist.ResumeLayout(false);
+            this.TablePanel_HeaderColListAlbum.ResumeLayout(false);
+            this.FlowPanel_HeaderTBAlbum.ResumeLayout(false);
+            this.FlowPanel_TableAlbum.ResumeLayout(false);
             this.Panel_Right.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -375,12 +435,12 @@ namespace MusicApp.Forms.UserControls
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel FlowPanel_ListInfoPlaylist;
-        private System.Windows.Forms.Label Lb_NameInfoPlaylist;
-        private System.Windows.Forms.Label Lb_HeaderPlaylistInfo;
-        private System.Windows.Forms.TableLayoutPanel TablePanel_HeaderColInfoPlaylist;
-        private System.Windows.Forms.Label Lb_TimeInfoPlaylist;
-        private System.Windows.Forms.FlowLayoutPanel FlowPanel_HeaderInfoPlaylist;
+        private System.Windows.Forms.FlowLayoutPanel FlowPanel_ListInfoAlbum;
+        private System.Windows.Forms.Label Lb_NameInfoAlbum;
+        private System.Windows.Forms.Label Lb_HeaderAlbumInfo;
+        private System.Windows.Forms.TableLayoutPanel TablePanel_HeaderColInfoAlbum;
+        private System.Windows.Forms.Label Lb_TimeInfoAlbum;
+        private System.Windows.Forms.FlowLayoutPanel FlowPanel_HeaderInfoAlbum;
         private System.Windows.Forms.FlowLayoutPanel FlowPanel_Left;
         private System.Windows.Forms.Panel PanelWarp_TboxNameSreach;
         private System.Windows.Forms.TextBox Tbox_NameSearch;
@@ -389,15 +449,19 @@ namespace MusicApp.Forms.UserControls
         private System.Windows.Forms.GroupBox Grbox_Search;
         private System.Windows.Forms.Panel Panel_HeaderGroupFunction;
         private System.Windows.Forms.GroupBox Grbox_GroupBy;
-        private System.Windows.Forms.Label Lb_ColNameListPlaylist;
+        private System.Windows.Forms.Label Lb_ColNameListAlbum;
         private System.Windows.Forms.Button Btn_Reload;
-        private System.Windows.Forms.Label Lb_HeaderListPlaylist;
-        private System.Windows.Forms.TableLayoutPanel TablePanel_HeaderColListPlaylist;
-        private System.Windows.Forms.FlowLayoutPanel FlowPanel_HeaderTBPlaylist;
-        private System.Windows.Forms.FlowLayoutPanel FlowPanel_TablePLaylist;
-        private System.Windows.Forms.FlowLayoutPanel FlowPanel_ListPlaylist;
+        private System.Windows.Forms.Label Lb_HeaderListAlbum;
+        private System.Windows.Forms.TableLayoutPanel TablePanel_HeaderColListAlbum;
+        private System.Windows.Forms.FlowLayoutPanel FlowPanel_HeaderTBAlbum;
+        private System.Windows.Forms.FlowLayoutPanel FlowPanel_TableAlbum;
+        private System.Windows.Forms.FlowLayoutPanel FlowPanel_ListAlbum;
         private System.Windows.Forms.Panel Panel_Right;
         private System.Windows.Forms.Label Lb_Artist;
         private System.Windows.Forms.ComboBox Cbox_Artist;
+        private System.Windows.Forms.Label Lb_OrderBy;
+        private System.Windows.Forms.ComboBox Cbox_Order;
+        private System.Windows.Forms.Label Lb_ColArtist;
+        private System.Windows.Forms.Timer Timer_CheckPlayingAlbum;
     }
 }

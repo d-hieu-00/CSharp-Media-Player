@@ -14,7 +14,7 @@ namespace MusicApp.Classes
         private static MyData resources;
         public static MainForm Main { get => main; }
         public static MyData Resources { get => resources; }
-        public static String linkSource { get; } = "";
+        public static String linkSource { get; } = "https://github.com/era90768/MediaPlayer-c-sharp-BT-13-05-2021";
         public static String linkProfile { get; } = "https://www.facebook.com/duyhieu.ndh/";
         public readonly static string AudioFilter = "All Supported Audio | *.mp3; *.wma; *.wav; *.m4a; *.ogg";
         public readonly static List<string> ArrayAudioFilter = new List<string>() { "mp3", "wma", "wav", "m4a", "ogg" };
@@ -30,7 +30,7 @@ namespace MusicApp.Classes
         public static void ConfigFolderBrowserDialog(FolderBrowserDialog openFolder)
         {
             openFolder.ShowNewFolderButton = true;
-            openFolder.SelectedPath = @"D:\tmpp";
+            //openFolder.SelectedPath = @"C:\";
             openFolder.Description = "Thêm thư mục chứa các file media" +
                 "\nCác định dạng được hỗ trợ:\n   ";
             openFolder.Description += string.Join(", ", ArrayAudioFilter);

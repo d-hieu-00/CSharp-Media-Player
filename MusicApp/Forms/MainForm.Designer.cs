@@ -35,8 +35,6 @@ namespace MusicApp.Forms
             this.Panel_Control = new System.Windows.Forms.Panel();
             this.Lb_Minimize = new System.Windows.Forms.Label();
             this.Panel_Header = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.Lb_Status = new System.Windows.Forms.Label();
             this.Panel_Main = new System.Windows.Forms.Panel();
             this.Panel_Header.SuspendLayout();
@@ -98,8 +96,6 @@ namespace MusicApp.Forms
             // Panel_Header
             // 
             this.Panel_Header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(144)))), ((int)(((byte)(142)))));
-            this.Panel_Header.Controls.Add(this.button2);
-            this.Panel_Header.Controls.Add(this.button1);
             this.Panel_Header.Controls.Add(this.Lb_Status);
             this.Panel_Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Header.Location = new System.Drawing.Point(170, 0);
@@ -110,26 +106,6 @@ namespace MusicApp.Forms
             this.Panel_Header.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
             this.Panel_Header.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form_MouseUp);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(495, 7);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(342, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "CheckPoint";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Lb_Status
             // 
             this.Lb_Status.AutoSize = true;
@@ -137,9 +113,9 @@ namespace MusicApp.Forms
             this.Lb_Status.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.Lb_Status.Location = new System.Drawing.Point(6, 11);
             this.Lb_Status.Name = "Lb_Status";
-            this.Lb_Status.Size = new System.Drawing.Size(48, 20);
+            this.Lb_Status.Size = new System.Drawing.Size(79, 20);
             this.Lb_Status.TabIndex = 0;
-            this.Lb_Status.Text = "Status";
+            this.Lb_Status.Text = "No playing";
             // 
             // Panel_Main
             // 
@@ -188,7 +164,5 @@ namespace MusicApp.Forms
         private System.Windows.Forms.Panel Panel_Header;
         private System.Windows.Forms.Panel Panel_Main;
         private System.Windows.Forms.Label Lb_Status;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
     }
 }

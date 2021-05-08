@@ -71,8 +71,8 @@ namespace MusicApp.Forms.UserControls.TableSong
             // Panel_Header
             // 
             this.Panel_Header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(144)))), ((int)(((byte)(142)))));
-            this.Panel_Header.Controls.Add(this.Lb_Header);
             this.Panel_Header.Controls.Add(this.Btn_Close);
+            this.Panel_Header.Controls.Add(this.Lb_Header);
             this.Panel_Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Header.Location = new System.Drawing.Point(0, 0);
             this.Panel_Header.Name = "Panel_Header";

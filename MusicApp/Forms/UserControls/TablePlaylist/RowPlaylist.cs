@@ -75,17 +75,19 @@ namespace MusicApp.Forms.UserControls.TablePlaylist
         }
         public bool CheckPlayingPlaylist()
         {
-            return Btn_Play.BackgroundImage == Properties.Resources.music_track;
+            return Btn_Play.Name == "play";
         }
         public void RemovePlayingPlaylist()
         {
             Btn_Play.BackgroundImage = Properties.Resources.play_button;
+            Btn_Play.Name = "";
             Btn_Play.Enabled = true;
         }
 
         public void SetPlayingPlaylist()
         {
             Btn_Play.BackgroundImage = Properties.Resources.music_track;
+            Btn_Play.Name = "play";
             Btn_Play.Enabled = false;
         }
         private void Btn_Play_Click(object sender, EventArgs e)
@@ -93,6 +95,7 @@ namespace MusicApp.Forms.UserControls.TablePlaylist
             if (CheckPlayingPlaylist())
                 return;
             MyResources.Main.PlayingTab.LoadPlaylist(GetID());
+            MyResources.Main.PlaylistTab.RemovePlayplistPlaying();
             SetPlayingPlaylist();
             Lb_Name.Focus();
         }

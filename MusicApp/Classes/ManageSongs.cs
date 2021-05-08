@@ -119,31 +119,24 @@ namespace MusicApp.Classes
                     return i;
             return null;
         }
-        public List<Song> FindSongsByAlbumID(int ID)
+        public List<Dictionary<string, string>> FindSongsByAlbumID(int ID)
         {
-            List<Song> tmp = new List<Song>();
-            List<int> listID = null;
-            int indexListID = 0;
+            Playlist tmp_pl = new Playlist()
+            {
+                ID = 0
+            };
 
             foreach (Album i in ListAlbums)
             {
                 if (i.ID == ID)
                 {
-                    listID = i.IDSongs;
+                    tmp_pl.IDSongs.AddRange(new List<int>(i.IDSongs));
+                    tmp_pl.Title = i.AlbumArtist;
                     break;
                 }
             }
 
-            foreach (Song i in ListSongs)
-            {
-                if(i.ID == listID[indexListID])
-                {
-                    tmp.Add(i);
-                    if (++indexListID == listID.Count)
-                        break;
-                }
-            }
-            return tmp;
+            return tmp_pl.GetPlayingListDic();
         }
         public List<Song> FindSongByArtistID(int ID)
         {
@@ -271,7 +264,7 @@ namespace MusicApp.Classes
                 bool ck = false;
                 foreach(Album i in ListAlbums)
                 {
-                    if (i.AblumArtist == song.SongArtist && i.Name == song.AlbumTitle)
+                    if (i.AlbumArtist == song.SongArtist && i.Name == song.AlbumTitle)
                     {
                         i.IDSongs.Add(song.ID);
                         ck = true;
@@ -282,7 +275,7 @@ namespace MusicApp.Classes
                     Album alb = new Album()
                     {
                         Name = song.AlbumTitle,
-                        AblumArtist = song.SongArtist,
+                        AlbumArtist = song.SongArtist,
                         ID = GetNextIDAlbum()
                     };
                     alb.IDSongs.Add(song.ID);

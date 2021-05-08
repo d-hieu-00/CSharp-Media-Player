@@ -221,7 +221,7 @@ namespace MusicApp.Forms
                 return;
             Panel_Main.Controls.Clear();
             indexTabs = 2;
-            PlaylistTab.LoadAllPlaylist();
+            //PlaylistTab.LoadAllPlaylist();
             Panel_Main.Controls.Add(PlaylistTab);
         }
 
@@ -285,31 +285,6 @@ namespace MusicApp.Forms
         public void SetCursorLoading()
         {
             Cursor = Cursors.WaitCursor;
-        }
-        #endregion
-
-        #region testing
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //check point
-            int a = 0;
-            int b = 0;
-            a += b;
-            b += a;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            MyResources.Resources.InsertPlaylist("My playlist");
-            MyResources.Resources.InsertSongToPlaylist(1, 1);
-            MyResources.Resources.InsertSongToPlaylist(1, 2);
-            MyResources.Resources.InsertSongToPlaylist(1, 3);
-            MyResources.Resources.InsertVideoToPlaylist(1, 1);
-            MyResources.Resources.InsertVideoToPlaylist(1, 2);
-            MyResources.Resources.InsertVideoToPlaylist(1, 3);
-            MyResources.Resources.InsertVideoToPlaylist(1, 4);
-            //MyResources.Resources.InsertPlaylist()
-            PlayingTab.LoadPlaylist(1);
         }
         #endregion
     }

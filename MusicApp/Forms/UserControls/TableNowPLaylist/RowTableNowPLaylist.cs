@@ -32,6 +32,7 @@ namespace MusicApp.Forms.UserControls.TableNowPLaylist
             Lb_Name.Text = item["name"];
             Lb_Duration.Text = item["duration"];
             Btn_Status.Tag = item;
+            Tag = item;
         }
 
         public void SetPLaying()
