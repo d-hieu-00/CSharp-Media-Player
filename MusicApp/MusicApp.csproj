@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ED402CA5-A39C-431F-A2DF-21595E481B22}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MusicApp</RootNamespace>
+    <AssemblyName>MusicApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app_logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="MaterialSkin, Version=2.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.1.4\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.WindowsRuntime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5\System.Runtime.WindowsRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Windows">
+      <HintPath>C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral\Annotated\Windows.winmd</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\ManageSongs.cs" />
+    <Compile Include="Classes\ManageVideos.cs" />
+    <Compile Include="Classes\MyData.cs" />
+    <Compile Include="Classes\MyResources.cs" />
+    <Compile Include="Entitys\Playlist.cs" />
+    <Compile Include="Entitys\Song\Album.cs" />
+    <Compile Include="Entitys\Song\Artist.cs" />
+    <Compile Include="Entitys\FolderImport.cs" />
+    <Compile Include="Entitys\Song\Song.cs" />
+    <Compile Include="Entitys\Song\SongCategory.cs" />
+    <Compile Include="Entitys\Video\Director.cs" />
+    <Compile Include="Entitys\Video\Video.cs" />
+    <Compile Include="Entitys\Video\VideoCategory.cs" />
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\Loading.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\ControlMedia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\ControlMedia.Designer.cs">
+      <DependentUpon>ControlMedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\TableDir\RowTableDir.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\TableDir\RowTableDir.Designer.cs">
+      <DependentUpon>RowTableDir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\TableNowPLaylist\RowTableNowPLaylist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\TableNowPLaylist\RowTableNowPLaylist.Designer.cs">
+      <DependentUpon>RowTableNowPLaylist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\TablePlaylist\EditPlaylist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\TablePlaylist\EditPlaylist.Designer.cs">
+      <DependentUpon>EditPlaylist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\TablePlaylist\RowInfoPlaylist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\TablePlaylist\RowInfoPlaylist.Designer.cs">
+      <DependentUpon>RowInfoPlaylist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\TablePlaylist\RowPlaylist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\TablePlaylist\RowPlaylist.Designer.cs">
+      <DependentUpon>RowPlaylist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\TableSong\AddSongToPlaylist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\TableSong\AddSongToPlaylist.Designer.cs">
+      <DependentUpon>AddSongToPlaylist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\TableSong\EditSong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\TableSong\EditSong.Designer.cs">
+      <DependentUpon>EditSong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\TableSong\RowTableSongs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\TableSong\RowTableSongs.Designer.cs">
+      <DependentUpon>RowTableSongs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\TableVideo\AddVideoToPlaylist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\TableVideo\AddVideoToPlaylist.Designer.cs">
+      <DependentUpon>AddVideoToPlaylist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\TableVideo\EditVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\TableVideo\EditVideo.Designer.cs">
+      <DependentUpon>EditVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\TableVideo\RowTableVideos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\TableVideo\RowTableVideos.Designer.cs">
+      <DependentUpon>RowTableVideos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\TabPanel\NoPlaying.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\TabPanel\NoPlaying.Designer.cs">
+      <DependentUpon>NoPlaying.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\TabPanel\Playing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\TabPanel\Playing.Designer.cs">
+      <DependentUpon>Playing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\TabPanel\Playlists.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\TabPanel\Playlists.Designer.cs">
+      <DependentUpon>Playlists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\TabPanel\Settings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\TabPanel\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\SideBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\SideBar.Designer.cs">
+      <DependentUpon>SideBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\TabPanel\SongAlbum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\TabPanel\SongAlbum.Designer.cs">
+      <DependentUpon>SongAlbum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\TabPanel\SongExplore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\TabPanel\SongExplore.Designer.cs">
+      <DependentUpon>SongExplore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\TabPanel\VidExplore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\TabPanel\VidExplore.Designer.cs">
+      <DependentUpon>VidExplore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\TabPanel\Welcome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\TabPanel\Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\ControlMedia.resx">
+      <DependentUpon>ControlMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\TableDir\RowTableDir.resx">
+      <DependentUpon>RowTableDir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\TableNowPLaylist\RowTableNowPLaylist.resx">
+      <DependentUpon>RowTableNowPLaylist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\TablePlaylist\EditPlaylist.resx">
+      <DependentUpon>EditPlaylist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\TablePlaylist\RowInfoPlaylist.resx">
+      <DependentUpon>RowInfoPlaylist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\TablePlaylist\RowPlaylist.resx">
+      <DependentUpon>RowPlaylist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\TableSong\AddSongToPlaylist.resx">
+      <DependentUpon>AddSongToPlaylist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\TableSong\EditSong.resx">
+      <DependentUpon>EditSong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\TableSong\RowTableSongs.resx">
+      <DependentUpon>RowTableSongs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\TableVideo\AddVideoToPlaylist.resx">
+      <DependentUpon>AddVideoToPlaylist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\TableVideo\EditVideo.resx">
+      <DependentUpon>EditVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\TableVideo\RowTableVideos.resx">
+      <DependentUpon>RowTableVideos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\TabPanel\NoPlaying.resx">
+      <DependentUpon>NoPlaying.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\TabPanel\Playing.resx">
+      <DependentUpon>Playing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\TabPanel\Playlists.resx">
+      <DependentUpon>Playlists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\TabPanel\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\SideBar.resx">
+      <DependentUpon>SideBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\TabPanel\SongAlbum.resx">
+      <DependentUpon>SongAlbum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\TabPanel\SongExplore.resx">
+      <DependentUpon>SongExplore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\TabPanel\VidExplore.resx">
+      <DependentUpon>VidExplore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControls\TabPanel\Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exchange.png" />
+    <None Include="Resources\Cat.gif" />
+    <None Include="Resources\app_logo_transparent.png" />
+    <Content Include="app_logo.ico" />
+    <None Include="Resources\Cat_roll.gif" />
+    <Content Include="Resources\expad-arrows.png" />
+    <Content Include="Resources\favicon.png" />
+    <Content Include="Resources\forward-button-next.png" />
+    <Content Include="Resources\forward-button-previ.png" />
+    <None Include="Resources\Infinity-2.4s-200px.gif" />
+    <Content Include="Resources\Infinity-2s-200px.gif" />
+    <Content Include="Resources\list.png" />
+    <Content Include="Resources\loading_square-ring.gif" />
+    <Content Include="Resources\logo.png" />
+    <Content Include="Resources\logo_transparent.png" />
+    <None Include="Resources\loop-one.png" />
+    <None Include="Resources\music-track.png" />
+    <Content Include="Resources\mute.png" />
+    <None Include="Resources\number-one-inside-a-circle.png" />
+    <None Include="Resources\next.png" />
+    <None Include="Resources\no-music.png" />
+    <Content Include="Resources\pause.png" />
+    <None Include="Resources\pencil.png" />
+    <Content Include="Resources\play-button.png" />
+    <None Include="Resources\reload.png" />
+    <None Include="Resources\reload1.png" />
+    <None Include="Resources\previuos.png" />
+    <None Include="Resources\plus.png" />
+    <Content Include="Resources\stop.png" />
+    <Content Include="Resources\volume.png" />
+    <None Include="Resources\shuffle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\UwpDesktop-Updated.10.0.17763.132\analyzers\dotnet\UwpDesktopAnalyzer.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
