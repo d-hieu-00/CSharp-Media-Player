@@ -257,7 +257,7 @@ namespace MusicApp.Forms
             if (indexTabs == 6)
                 return;
             Panel_Main.Controls.Clear();
-            indexTabs = 5;
+            indexTabs = 6;
             Panel_Main.Controls.Add(SettingTab);
         }
 
